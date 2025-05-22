@@ -1,0 +1,169 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+footer {
+    background-color: #0a0a23; /* Footer background color */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Expenses Container */
+.Expenses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+
+    color: #0a0a23; /* Text color */
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.Expenses > p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Expense Form */
+#expense-form {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff; /* Form background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#expense-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#expense-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#expense-form input[type="number"],
+#expense-form select,
+#expense-form textarea,
+#expense-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#expense-form button {
+    background-color: #3b3b4f; /* Button background color */
+    border-color: white;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#expense-form button:hover {
+    background-color: #45a049; /* Button hover background color */
+}
+
+/* Expense List */
+#expense-list {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff; /* List background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#expense-list h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#expenses {
+    list-style-type: none;
+    padding: 0;
+}
+
+.expense-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f0f2f5; /* Expense item background color */
+    border-radius: 10px;
+}
+
+.expense-image {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.expense-image img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5px;
+}
+
+.expense-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.expense-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Total Cost */
+#total-cost {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff; /* Total cost background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#total-cost h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#total-amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+.image-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 5px; /* Add rounded corners */
+    margin-bottom: 10px; /* Add some space below the image */
+  }
+  
+  /* Style the expense image */
+  .image-container img {
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Crop image to fit container while maintaining aspect ratio */
+  }

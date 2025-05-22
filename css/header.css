@@ -1,0 +1,200 @@
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+  body {
+    display: block;
+    margin: 8px;
+    background-color: #1b1b32;
+   
+    font-family: Tahoma;
+    font-size: 16px;
+  }
+  header{
+    display: block;
+  }
+  #header-container {
+    background: rgb(22, 22, 248);
+    height: 160px;
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .header-item { 
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    position: relative;
+    height: 150px;
+    width: 960px;
+  
+    background-color: #0a0a23;
+   
+  
+  }
+  
+  .header-logo > img{
+    display: block;
+    padding-left:30px;
+    height: 140px;
+    width:100px
+  }
+  
+  
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Centers text vertically */
+    padding-left: 30px;
+    color:white;
+   
+    
+  }
+  
+  .header-text > h1 {
+    margin: 0; 
+    font-size: 40px;
+  }
+  
+  .header-text > p {
+    margin: 0;
+    border-top: 2px solid rgb(255, 255, 255); /* Adds border top to the paragraph */
+    padding-top: 5px;
+  }
+  
+  
+  .topnav > ul {
+    list-style: none;
+    padding: 30px; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    
+  }
+  .topnav  ul a {
+  display: block;
+  text-decoration: none;
+  color:white;
+  font-size: 20px;
+  
+  }
+  
+  #body-wrapper {
+    width: 960px;
+    margin: 20px auto; /* Adds some top and bottom margin for spacing */
+    background-color: #fcfcfc;
+  }
+
+  header >h1, p {
+    margin: 1em auto;
+    text-align: center;
+  }
+
+
+.topnav {
+    display: flex;
+    align-items: center;
+}
+
+.topnav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li {
+    margin-right: 20px;
+}
+
+.topnav ul li:last-child {
+    margin-right: 0;
+}
+
+.topnav ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Adjust font size */
+    padding: 10px;
+}
+
+/* CSS for search bar */
+.search-container {
+    margin-right: 20px; /* Add margin to separate from last menu item */
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px; /* Adjust font size */
+    border: none;
+}
+/* Responsive header */
+@media screen and (max-width: 768px) {
+  #header-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .header-item {
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-logo > img {
+    padding-left: 0;
+    margin-bottom: 10px;
+    width: 80px; /* Adjust the width of the logo as needed */
+  }
+
+  .header-text {
+    padding-left: 0;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .header-text > h1 {
+    font-size: 24px; /* Adjust the font size of the heading */
+  }
+
+  .header-text > p {
+    text-align: center;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .topnav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .topnav ul li {
+    margin: 0 10px;
+  }
+
+  .topnav ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px; /* Adjust the font size of the navigation links */
+  }
+
+  .search-container {
+    margin: 10px auto;
+  }
+}

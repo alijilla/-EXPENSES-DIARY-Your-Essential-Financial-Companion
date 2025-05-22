@@ -1,0 +1,129 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #1b1b32 ; /* Background color */
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 20px 0;
+}
+#body-wrapper,
+#body-wrapper1 {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.User-Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.user-item {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* user.css */
+
+/* User Profile Picture */
+.profile-picture {
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  border-radius: 50%; /* Makes the image round */
+  overflow: hidden; /* Ensures the image stays within the rounded border */
+}
+
+.profile-picture img {
+  width: 100%; /* Ensures the image fills the container */
+  height: 100%; /* Ensures the image fills the container */
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+.User_Info {
+  margin-bottom: 20px;
+}
+
+.User_Info label {
+  font-weight: bold;
+}
+
+.User_Info p {
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+#total-amount-daily {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+fieldset {
+  margin-bottom: 20px;
+}
+
+
+.bookshelf {
+  display: flex;
+  flex-wrap: wrap; /* Allow books to wrap onto the next line */
+  justify-content: flex-start; /* Align books to the start of the container */
+}
+
+.book {
+  flex: 0 0 calc(33.33% - 20px); /* Each book takes up one-third of the container's width with some spacing */
+  margin-right: 20px; /* Add spacing between books */
+  margin-bottom: 20px; /* Add spacing below books */
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #0a0a23; /* Footer background color */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Adjustments for responsiveness */
+@media screen and (max-width: 768px) {
+  .User-Container {
+    grid-template-columns: 1fr;
+  }
+}
