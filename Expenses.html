@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expenses Diary</title>
+    <link rel="stylesheet" href="css/expenses.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="body-wrapper1"> 
+        <header>  
+            <div id="header-container">
+                <div class="header-item">
+                    <div class="header-logo"><img src="img/logo.png"></div>
+                    <div class="header-text">
+                        <h1>Expenses Diary</h1> 
+                        <p><span class="essential-text">Your Essential Financial Companion</span></p>
+                    </div>
+                    <div class="topnav">
+                        <ul>
+                            <li><a href="User.html"> <strong>ACCOUNT</strong></a></li>  
+                            <li><a href="index.html"> <strong>HOME</strong></a></li> 
+                            <li><a href="About.html"> <strong>ABOUT US</strong></a></li>
+                            <li><a href="Expenses.html"> <strong>EXPENSES</strong></a></li>
+                        </ul>
+                        <div class="search-container">
+                            <input type="text" placeholder="Search.." name="search">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logout-container">
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </header>
+        
+        <div id="body-wrapper">
+            <div class="Expenses">
+                <div id="expense-form">
+                    <h2>Add Expense</h2>
+                    <form id="add-expense-form" action="" method="">
+                        <label for="expense-amount">Amount:</label>
+                        <input type="number" id="expense-amount" name="expense-amount" required>
+                        <label for="expense-category">Category:</label>
+                        <select id="expense-category" name="expense-category" required>
+                            <option value="">Select Category</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Utilities">Utilities</option>
+                            <option value="Transportation">Transportation</option>
+                            <!-- Add more categories as needed -->
+                        </select>
+                        <label for="expense-description" class="description">Description:</label>
+                        <textarea id="expense-description" name="expense-description"></textarea>
+                        <label for="expense-image">Upload Image:</label>
+                        <input type="file" id="expense-image" name="expense-image">
+                        <label for="expense-comments">Comments:</label>
+                        <textarea id="expense-comments" name="expense-comments" class="comment"></textarea>
+                        <button class="inline" type="submit">Add Expense</button>
+                    </form>
+                </div>
+
+                <div id="expense-list">
+                    <h2>Expense List</h2>
+                    <div id="expenses">
+                        <!-- Expenses will be dynamically added here -->
+                    </div>
+                </div>
+
+                <div id="total-cost">
+                    <h2>Total Cost for the Day</h2>
+                    <p id="total-amount"></p>
+                </div>
+            </div>
+        </div>
+    
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2024 Expenses Diary. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Add click event listener to logout button
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+            // Perform logout action here, such as redirecting to the login page
+            window.location.href = "login.html"; // Replace "login.html" with your actual login page
+        });
+
+        // After adding an expense, store it in local storage
+        document.getElementById("add-expense-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get expense data from the form
+            var expenseAmount = document.getElementById("expense-amount").value;
+            var expenseCategory = document.getElementById("expense-category").value;
+            var expenseDescription = document.getElementById("expense-description").value;
+            // Add image handling if needed
+
+            // Create an object to represent the expense
+            var expense = {
+                amount: parseFloat(expenseAmount), // Convert to float
+                category: expenseCategory,
+                description: expenseDescription,
+                date: new Date().toLocaleDateString() // Add the current date
+            };
+
+            // Retrieve existing expenses from local storage or initialize an empty array
+            var expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+
+            // Add the new expense to the array
+            expenses.push(expense);
+
+            // Store the updated expenses back in local storage
+            localStorage.setItem("expenses", JSON.stringify(expenses));
+
+            // Refresh the page or update the UI as needed
+            location.reload();
+        });
+
+        // Retrieve expenses from local storage and display them
+        document.addEventListener("DOMContentLoaded", function() {
+            var expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+            var expensesContainer = document.getElementById("expenses");
+            var totalCost = 0;
+
+            expenses.forEach(function(expense) {
+                var expenseItem = document.createElement("div");
+                expenseItem.classList.add("expense-item");
+
+                var expenseDetails = document.createElement("div");
+                expenseDetails.classList.add("expense-details");
+
+                var expenseAmount = document.createElement("p");
+                expenseAmount.textContent = "Amount: $" + expense.amount.toFixed(2);
+
+                var expenseCategory = document.createElement("p");
+                expenseCategory.textContent = "Category: " + expense.category;
+
+                var expenseDescription = document.createElement("p");
+                expenseDescription.textContent = "Description: " + expense.description;
+
+                var expenseDate = document.createElement("p");
+                expenseDate.textContent = "Date: " + expense.date;
+
+                expenseDetails.appendChild(expenseAmount);
+                expenseDetails.appendChild(expenseCategory);
+                expenseDetails.appendChild(expenseDescription);
+                expenseDetails.appendChild(expenseDate);
+
+                expenseItem.appendChild(expenseDetails);
+                expensesContainer.appendChild(expenseItem);
+
+                // Calculate total cost
+                totalCost += expense.amount;
+            });
+
+            // Display total cost
+            var totalAmountElement = document.getElementById("total-amount");
+            totalAmountElement.textContent = "$" + totalCost.toFixed(2);
+        });
+    </script>
+</body>
+</html>

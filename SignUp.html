@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>  </title>
+	<link rel="stylesheet" href="css/SignUp.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <header>  
+        <div id = "header-container">
+           
+         <div  class = "header-item">
+            
+            <div class = "header-logo"><img src="img/logo.png"></div>
+            <div class = "header-text">
+                <h1>Expenses Diary</h1> 
+               <p><p><span class="essential-text"></span>Your Essential Financial Companion</p>
+            </div>
+
+            <div class="topnav">
+                <ul>
+                   <li><a href="#" target="_parent"> <strong>ABOUT US</strong></a></li>  
+               </ul>
+               </div>
+            </div>
+        
+        </div>
+	</header> 
+     <div id="body-wrapper">
+        <div class="SignUp" >
+            <br>
+            <br>
+           
+            
+            <h3><strong>Sign up<strong> below</strong> to create an account.</h3>
+            
+    <form action="index.html" method="GET">
+            <fieldset>
+                <label for="first-name"> Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+                <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+                <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+                <label for="new-password">Create a Password: <input id="new-password" name="new-password" type="password" pattern="[a-zA-Z0-9!@#$%^&*()_-]{8,}" required /></label>
+                <label for="new-password">Type again your Password: <input id="new-password" name="new-password" type="password" pattern="[a-zA-Z0-9!@#$%^&*()_-]{8,}" required /></label>
+                
+            </fieldset>
+            <fieldset>
+            <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+            <label for="bio">Provide a bio:
+                <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like  of micko..."></textarea>
+              </label>
+            </fieldset>
+            <fieldset>
+                <label for="terms-and-conditions">
+                    <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="#">terms and conditions</a>
+                  </label>
+                  <input type="submit" value="Submit" />
+                  <p>Already have an Account? <a href="logIn.html">LOG IN</a></a></p>
+            
+            </fieldset>
+     </form>
+
+    </div>
+</div>
+    
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2024 Expenses Diary. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+</html>
+

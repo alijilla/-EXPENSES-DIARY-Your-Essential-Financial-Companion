@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expenses Diary</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/expenses.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+   
+</head>
+<body id="body-wrapper">
+    <div id="body-wrapper">
+    <header>  
+        <div id="header-container">
+            <div class="header-item">
+                <div class="header-logo"><img src="img/logo.png"></div>
+                <div class="header-text">
+                    <h1>Expenses Diary</h1> 
+                    <p><span class="essential-text">Your Essential Financial Companion</span></p>
+                </div>
+                <div class="topnav">
+                    <ul>
+                        <li><a href="User.html" target="_parent"> <strong>ACCOUNT</strong></a></li>  
+                        <li><a href="index.html" target="_parent"> <strong>HOME</strong></a></li> 
+                        <li><a href="About.html" target="_parent"> <strong>ABOUT US</strong></a></li>
+                        </ul>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search.." name="search">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logout-container">
+            <button id="logoutBtn">Logout</button>
+          </div>
+    </header>
+
+    
+        <div class="bookcontainer">
+            <h1 class="section-title">Discover Books</h1>
+            <div class="listofbooks">
+                <div class="book">
+                    <img class="book-img" src="img/Book1.img" alt="Book Cover">
+                    <h2 class="bookname">The Financial Diet: A Total Beginner's Guide to Getting Good with Money Paperback – Illustrated, January 2, 2018</h2>
+                    <button class="bookbtn" data-modal-id="modal1" data-book-title="Book 1" data-author="Author 1">Learn More</button>
+                </div>
+                <div class="book">
+                    <img class="book-img" src="img/Book2.jpg" alt="Book Cover">
+                    <h2 class="bookname">Broke Millennial: Stop Scraping By and Get Your Financial Life Together (Broke Millennial Series) Paperback – May 2, 2017</h2>
+                    <button class="bookbtn" data-modal-id="modal2" data-book-title="Book 2" data-author="Author 2">Learn More</button>
+                </div>
+                <div class="book">
+                    <img class="book-img" src="img/Book3.jpg" alt="Book Cover">
+                    <h2 class="bookname">You Need a Budget: The Proven System for Breaking the Paycheck-to-Paycheck Cycle, Getting Out of Debt, and Living the Life You Want Kindle Edition</h2>
+                    <button class="bookbtn" data-modal-id="modal3" data-book-title="Book 3" data-author="Author 3">Learn More</button>
+                </div>
+                <div class="book">
+                    <img class="book-img" src="img/Book4.jpg" alt="Book Cover">
+                    <h2 class="bookname">Bad with Money: The Imperfect Art of Getting Your Financial Sh*t Together</h2>
+                    <button class="bookbtn" data-modal-id="modal4" data-book-title="Book 4" data-author="Author 4">Learn More</button>
+                </div>
+                <div class="book">
+                    <img class="book-img" src="img/Book5.jpg" alt="Book Cover">
+                    <h2 class="bookname">Broke Millennial Takes On Investing: A Beginner's Guide to Leveling Up Your Money</h2>
+                    <button class="bookbtn" data-modal-id="modal5" data-book-title="Book 5" data-author="Author 5">Learn More</button>
+                </div>
+                <div class="book">
+                    <img class="book-img" src="img/Book6.jpg" alt="Book Cover">
+                    <h2 class="bookname">Get Good with Money: Ten Simple Steps to Becoming Financially Whole</h2>
+                    <button class="bookbtn" data-modal-id="modal6" data-book-title="Book 6" data-author="Author 6">Learn More</button>
+                </div><!-- Additional books can be added in a similar manner -->
+            </div>
+        </div>
+        </div>
+    </div>
+     
+
+<!-- Modal for BOOK1 description -->
+<div class="modal" id="modal1">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Title: The Financial Diet: A Total Beginner's Guide to Getting Good with Money Paperback – Illustrated, January 2, 2018</h3>
+        <p>Author: by Chelsea Fagan, Lauren Ver Hage </p>
+        <p>The Financial Diet is the personal finance book for people who 
+            don’t care about personal finance. Whether you’re in need of an
+             overspending detox, buried under student debt, or just trying to
+              figure out how to live on an entry-level salary, The Financial Diet
+               gives you tools to make a budget, understand investments, and deal
+                with your credit. Chelsea Fagan has tapped a range of experts to help you
+                 make the best choices for you, but she also knows that being smarter with 
+                 money isn’t just about what you put in the bank. It’s about everything―from
+                  the clothes you put in your closet, to your financial relationship habits, to the food you put in your kitchen (instead of ordering in again). So The Financial Diet gives you the tools to negotiate a raise and the perfect cocktail recipe to celebrate your new salary. </p>
+        <input class="addtouser" type="submit" value="Add">
+    </div>
+</div>
+<div class="modal" id="modal2">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Title: Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>
+            If you’re a cash-strapped 20- or 30-something, it’s easy to get freaked out by finances. But you’re not doomed to spend your life drowning in debt or mystified by money. It’s time to stop scraping by and take control of your money and your life with this savvy and smart guide.</p>
+        <input class="addtouser" type="submit" value="Add">
+    </div>
+</div>
+<div class="modal" id="modal3">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Title: Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>The Financial Diet is the personal finance book for people who 
+            don’t care about personal finance. Whether you’re in need of an
+             overspending detox, buried under student debt, or just trying to
+              figure out how to live on an entry-level salary, The Financial Diet
+               gives you tools to make a budget, understand investments, and deal
+                with your credit. Chelsea Fagan has tapped a range of experts to help you
+                 make the best choices for you, but she also knows that being smarter with 
+                 money isn’t just about what you put in the bank. It’s about everything―from
+                  the clothes you put in your closet, to your financial relationship habits, to the food you put in your kitchen (instead of ordering in again). So The Financial Diet gives you the tools to negotiate a raise and the perfect cocktail recipe to celebrate your new salary. </p>
+    
+        <input class="addtouser" type="submit" value="Add">
+    </div>
+</div>
+<div class="modal" id="modal4">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Title: Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>The Financial Diet is the personal finance book for people who 
+            don’t care about personal finance. Whether you’re in need of an
+             overspending detox, buried under student debt, or just trying to
+              figure out how to live on an entry-level salary, The Financial Diet
+               gives you tools to make a budget, understand investments, and deal
+                with your credit. Chelsea Fagan has tapped a range of experts to help you
+                 make the best choices for you, but she also knows that being smarter with 
+                 money isn’t just about what you put in the bank. It’s about everything―from
+                  the clothes you put in your closet, to your financial relationship habits, to the food you put in your kitchen (instead of ordering in again). So The Financial Diet gives you the tools to negotiate a raise and the perfect cocktail recipe to celebrate your new salary. </p>
+    
+        <input class="addtouser" type="submit" value="Add">
+    </div>
+</div>
+<div class="modal" id="modal5">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Title: Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>A guide to investing basics by the author of Broke Millennial, for anyone who feels like they aren't ready (or rich enough) to get into the market
+
+            Millennials want to learn how to start investing. The problem is that most have no idea where to begin. There's a significant lack of information out there catering to the concerns of new millennial investors, such as:
+            
+              *  Should I invest while paying down student loans?
+              *  How do I invest in a socially responsible way?
+              *  What about robo-advisors and apps--are any of them any good?
+              *  Where can I look online for investment advice?
+            
+            In this second book in the Broke Millennial series, Erin Lowry answers those questions and delivers all of the investment basics in one easy-to-digest package. Tackling topics ranging from common terminology to how to handle your anxiety to retirement savings and even how to actually buy and sell a stock, this hands-on guide will help any investment newbie become a confident player in the market on their way to building wealth.
+            </p>
+    
+        <input class="addtouser" type="submit" value="Add">
+    </div>
+</div>
+<div class="modal" id="modal6">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Title: Book Title</h3>
+        <p>Author: Author Name</p>
+        <p>The Financial Diet is the personal finance book for people who 
+            don’t care about personal finance. Whether you’re in need of an
+             overspending detox, buried under student debt, or just trying to
+              figure out how to live on an entry-level salary, The Financial Diet
+               gives you tools to make a budget, understand investments, and deal
+                with your credit. Chelsea Fagan has tapped a range of experts to help you
+                 make the best choices for you, but she also knows that being smarter with 
+                 money isn’t just about what you put in the bank. It’s about everything―from
+                  the clothes you put in your closet, to your financial relationship habits, to the food you put in your kitchen (instead of ordering in again). So The Financial Diet gives you the tools to negotiate a raise and the perfect cocktail recipe to celebrate your new salary. </p>
+    
+        <input class="addtouser" type="submit" value="Add">
+    </div>
+</div>
+
+    <div id="body-wrapper">
+        <div class="Expenses">
+            <div id="expense-form">
+                <h2>Add Expense</h2>
+                <form id="add-expense-form" action="" method="">
+                    <label for="expense-amount">Amount:</label>
+                    <input type="number" id="expense-amount" name="expense-amount" required>
+                    <label for="expense-category">Category:</label>
+                    <select id="expense-category" name="expense-category" required>
+                        <option value="">Select Category</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Transportation">Transportation</option>
+                        <!-- Add more categories as needed -->
+                    </select>
+                    <label for="expense-description" class="description">Description:</label>
+                    <textarea id="expense-description" name="expense-description"></textarea>
+                    <label for="expense-image">Upload Image:</label>
+                    <input type="file" id="expense-image" name="expense-image">
+                    <label for="expense-comments">Comments:</label>
+                    <textarea id="expense-comments" name="expense-comments" class="comment"></textarea>
+                    <button class="inline" type="submit">Add Expense</button>
+                </form>
+            </div>
+
+            <div id="expense-list">
+                <h2>Expense List</h2>
+                
+<div id="expenses">
+    
+</div>
+
+            </div>
+
+            <div id="total-cost">
+                <h2>Total Cost for the Day</h2>
+                <p id="total-amount"></p>
+            </div>
+        </div>
+        </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Expenses Diary. All rights reserved.</p>
+        </div>
+    </footer>
+
+   
+</body>
+<!-- Add this script at the end of the body or wrap it in a DOMContentLoaded event listener -->
+
+<script>
+   // Add click event listener to logout button
+   document.getElementById("logoutBtn").addEventListener("click", function() {
+            // Perform logout action here, such as redirecting to the login page
+            window.location.href = "login.html"; // Replace "login.html" with your actual login page
+        });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var modalBtns = document.querySelectorAll(".bookbtn");
+  
+    modalBtns.forEach(function(btn) {
+      btn.onclick = function() {
+        var bookTitle = this.getAttribute("data-book-title");
+        var bookAuthor = this.getAttribute("data-author");
+        var modalId = this.getAttribute("data-modal-id");
+        var modal = document.getElementById(modalId);
+  
+        modal.querySelector("h3").textContent = "Title: " + bookTitle;
+        modal.querySelector("p").textContent = "Author: " + bookAuthor;
+  
+        modal.style.display = "block";
+  
+        // Close modal when close button is clicked
+        modal.querySelector(".close").onclick = function() {
+          modal.style.display = "none";
+        };
+  
+        // Add event listener to "Add to Bookshelf" button inside the modal
+        var addToBookshelfBtn = modal.querySelector(".addtouser");
+        addToBookshelfBtn.addEventListener("click", function() {
+          var storedBooks = localStorage.getItem("userBooks");
+          var books = storedBooks ? JSON.parse(storedBooks) : [];
+          books.push({ title: bookTitle, author: bookAuthor });
+          localStorage.setItem("userBooks", JSON.stringify(books));
+          alert("Book added to bookshelf!");
+          displayBooks(); // Call function to display books again after adding
+        });
+      };
+    });
+  
+    // Function to display books in the bookshelf
+    function displayBooks() {
+      var bookshelf = document.querySelector(".bookshelf");
+      bookshelf.innerHTML = ""; // Clear existing content
+  
+      var storedBooks = localStorage.getItem("userBooks");
+      var books = storedBooks ? JSON.parse(storedBooks) : [];
+  
+      books.forEach(function(book, index) {
+        var bookElement = document.createElement("div");
+        bookElement.classList.add("book-item");
+  
+        var bookTitle = document.createElement("h2");
+        bookTitle.textContent = book.title;
+  
+        var bookAuthor = document.createElement("p");
+        bookAuthor.textContent = "by " + book.author;
+  
+        var removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.classList.add("remove-btn");
+        removeButton.addEventListener("click", function() {
+          books.splice(index, 1); // Remove the book from the array
+          localStorage.setItem("userBooks", JSON.stringify(books)); // Update localStorage
+          displayBooks(); // Call function to display books again after removing
+        });
+  
+        bookElement.appendChild(bookTitle);
+        bookElement.appendChild(bookAuthor);
+        bookElement.appendChild(removeButton);
+  
+        bookshelf.appendChild(bookElement);
+      });
+    }
+  
+    // Call function to display books when the page loads
+    displayBooks();
+  
+    // Close modal when close button is clicked
+    var modals = document.querySelectorAll(".modal");
+    modals.forEach(function(modal) {
+      modal.querySelector(".close").onclick = function() {
+        modal.style.display = "none";
+      };
+    });
+  
+  });
+
+
+// After adding an expense, store it in local storage
+document.getElementById("add-expense-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get expense data from the form
+    var expenseAmount = document.getElementById("expense-amount").value;
+    var expenseCategory = document.getElementById("expense-category").value;
+    var expenseDescription = document.getElementById("expense-description").value;
+    // Add image handling if needed
+
+    // Create an object to represent the expense
+    var expense = {
+        amount: parseFloat(expenseAmount), // Convert to float
+        category: expenseCategory,
+        description: expenseDescription,
+        date: new Date().toLocaleDateString() // Add the current date
+    };
+
+    // Retrieve existing expenses from local storage or initialize an empty array
+    var expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+
+    // Add the new expense to the array
+    expenses.push(expense);
+
+    // Store the updated expenses back in local storage
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+
+    // Also, add the expense to the user's local storage
+    var userExpenses = JSON.parse(localStorage.getItem("userExpenses")) || [];
+    userExpenses.push(expense);
+    localStorage.setItem("userExpenses", JSON.stringify(userExpenses));
+
+    // Refresh the page or update the UI as needed
+    location.reload();
+});
+
+    </script>
+    
+ 
+
+    <script>
+        // Retrieve expenses from user's local storage and display them
+        var userExpenses = JSON.parse(localStorage.getItem("userExpenses")) || [];
+        var expensesContainer = document.getElementById("expenses");
+        var totalCost = 0;
+  
+        userExpenses.forEach(function(expense, index) {
+            var expenseItem = document.createElement("div");
+            expenseItem.classList.add("expense-item");
+  
+            var expenseDetails = document.createElement("div");
+            expenseDetails.classList.add("expense-details");
+  
+            var expenseAmount = document.createElement("p");
+            expenseAmount.textContent = "Amount: PHP" + expense.amount.toFixed(2);
+  
+            var expenseCategory = document.createElement("p");
+            expenseCategory.textContent = "Category: " + expense.category;
+  
+            var expenseDescription = document.createElement("p");
+            expenseDescription.textContent = "Description: " + expense.description;
+  
+            var expenseDate = document.createElement("p");
+            expenseDate.textContent = "Date: " + expense.date;
+  
+            // Add remove button
+            var removeButton = document.createElement("button");
+            removeButton.textContent = "Remove";
+            removeButton.classList.add("remove-btn");
+            removeButton.addEventListener("click", function() {
+                removeExpenseFromLocalStorage(index); // Remove the expense from local storage
+                expenseItem.remove(); // Remove the expense item from the UI
+                // Recalculate total cost
+                totalCost -= expense.amount;
+                document.getElementById("total-amount").textContent = "PHP" + totalCost.toFixed(2);
+            });
+  
+            expenseDetails.appendChild(expenseAmount);
+            expenseDetails.appendChild(expenseCategory);
+            expenseDetails.appendChild(expenseDescription);
+            expenseDetails.appendChild(expenseDate);
+            expenseDetails.appendChild(removeButton); // Append the remove button
+  
+            expenseItem.appendChild(expenseDetails);
+            expensesContainer.appendChild(expenseItem);
+  
+            // Calculate total cost
+            totalCost += expense.amount;
+        });
+  
+        // Display total cost
+        var totalAmountElement = document.getElementById("total-amount");
+        totalAmountElement.textContent = "PHP" + totalCost.toFixed(2);
+  
+        // Function to remove an expense from local storage
+        function removeExpenseFromLocalStorage(index) {
+            var userExpenses = JSON.parse(localStorage.getItem("userExpenses")) || [];
+            userExpenses.splice(index, 1); // Remove the expense at the specified index
+            localStorage.setItem("userExpenses", JSON.stringify(userExpenses));
+        }
+    </script> 
+         <script>
+           
+            </script>
+    
+</html>
